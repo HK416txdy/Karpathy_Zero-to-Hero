@@ -8,10 +8,10 @@
             <TabSessionState>
               <option name="projectPath" value="E:\Karpathy_Zero-to-Hero" />
               <option name="provider" value="codex" />
-              <option name="sessionId" value="01a12dbe-86ce-7192-9ed4-216cffe785ce" />
+              <option name="sessionId" value="01a135e7-a81f-79a3-9837-450eb5aae975" />
               <option name="cwd" value="E:\Karpathy_Zero-to-Hero" />
               <option name="model" value="gpt-6-astra" />
-              <option name="permissionMode" value="default" />
+              <option name="permissionMode" value="auto" />
             </TabSessionState>
           </value>
         </entry>
