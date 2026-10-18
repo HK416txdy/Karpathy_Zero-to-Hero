@@ -29,7 +29,7 @@ def draw_dot(root):
         # record 将标签和数值显示在矩形的不同分栏中。
         dot.node(
             name=uid,
-            label="{ %s | data %.4f }" % (n.label, n.data),
+            label="{ %s | data %.4f | grad %.4f }" % (n.label, n.data, n.grad),
             shape='record',
         )
         if n._op:

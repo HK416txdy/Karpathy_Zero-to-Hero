@@ -25,4 +25,3 @@ if __name__ == '__main__':
         L,
         view=True,
     )
-    print(f'Graph saved to: {output_path}')
