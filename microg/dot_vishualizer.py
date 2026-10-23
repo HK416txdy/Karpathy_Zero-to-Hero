@@ -1,4 +1,4 @@
-from pathlib import Path
+
 
 from graphviz import Digraph
 
@@ -21,6 +21,7 @@ def trace(root):
 
 def draw_dot(root):
     """创建从左到右排列的计算图；返回对象，供预览或渲染。"""
+    root.backward()
     dot = Digraph(format='svg', graph_attr={'rankdir': 'LR'})
 
     nodes, edges = trace(root)
