@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/microg/Svg_out" />
     </content>
-    <orderEntry type="jdk" jdkName="E:\Karpathy_Zero-to-Hero\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="~/PycharmProjects/Karpathy_Zero-to-Hero/.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
