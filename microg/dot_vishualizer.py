@@ -1,4 +1,4 @@
-
+from pathlib import Path
 
 from graphviz import Digraph
 
@@ -19,8 +19,8 @@ def trace(root):
     return nodes, edges
 
 
-def draw_dot(root):
-    """创建从左到右排列的计算图；返回对象，供预览或渲染。"""
+def _build_dot(root):
+    """创建从左到右排列的计算图。"""
     root.backward()
     dot = Digraph(format='svg', graph_attr={'rankdir': 'LR'})
 
@@ -45,11 +45,19 @@ def draw_dot(root):
     return dot
 
 
-def render_dot(root, filename='computation_graph', directory='Svg_out', view=False):
-    dot = draw_dot(root)
+def draw_dot(root, filename='computation_graph', directory=None, view=False):
+    """直接生成 SVG，默认保存到本模块旁的 Svg_out，返回文件路径。"""
+    if directory is None:
+        directory = Path(__file__).resolve().parent / 'Svg_out'
+    dot = _build_dot(root)
     return dot.render(
         filename=filename,
         directory=directory,
         view=view,
         cleanup=True,
     )
+
+
+def render_dot(root, filename='computation_graph', directory=None, view=False):
+    """兼容原来的渲染入口。"""
+    return draw_dot(root, filename=filename, directory=directory, view=view)

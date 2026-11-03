@@ -22,7 +22,7 @@ class Value:
                     "+")
 
         def _backward():
-            self.grad += out.grad
+            self.grad += out.grad #累加保证在多次使用同一个节点时，梯度不会被覆盖（下同）
             other.grad += out.grad
 
         out._backward = _backward
@@ -40,13 +40,18 @@ class Value:
         out._backward = _backward
         return out
 
-    def tanh(self):
+    def tanh(self):#双曲正切函数
         x = self.data
         t = (math.exp(2*x) - 1) / (math.exp(2*x) + 1)
         out = Value(t,(self,),"tanh")
+
+        def _backward():
+            self.grad += (1-t**2)*out.grad
+
+        out._backward = _backward
         return out
 
-    def backward(self):
+    def backward(self): #仅负责向前传递，各数学函数使用自动微分
         ordered = []
         visited = set()
 
