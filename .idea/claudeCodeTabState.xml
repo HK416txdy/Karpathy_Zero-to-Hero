@@ -6,13 +6,12 @@
         <entry key="0">
           <value>
             <TabSessionState>
-              <option name="projectPath" value="$PROJECT_DIR$" />
+              <option name="projectPath" value="E:\Karpathy_Zero-to-Hero" />
               <option name="provider" value="codex" />
-              <option name="sessionId" value="01a17ac9-900c-7233-9aab-c3d34350b397" />
-              <option name="cwd" value="$PROJECT_DIR$" />
+              <option name="sessionId" value="01a1839f-4cca-79e1-adf1-aa7ffd38b6a1" />
+              <option name="cwd" value="E:\Karpathy_Zero-to-Hero" />
               <option name="model" value="gpt-6.1-sol" />
               <option name="permissionMode" value="auto" />
-              <option name="reasoningEffort" value="medium" />
             </TabSessionState>
           </value>
         </entry>
