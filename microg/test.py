@@ -32,9 +32,3 @@ o=n.tanh();o.label = 'o'
 o.backward()
 
 output_path = dot_vishualizer.draw_dot(o)
-
-m = Value(0.1, label='m')
-n = m + m ; n.label = 'n'
-var = n + 1
-
-output_path = dot_vishualizer.draw_dot(n)
