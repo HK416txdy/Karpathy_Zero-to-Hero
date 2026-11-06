@@ -56,8 +56,3 @@ def draw_dot(root, filename='computation_graph', directory=None, view=False):
         view=view,
         cleanup=True,
     )
-
-
-def render_dot(root, filename='computation_graph', directory=None, view=False):
-    """兼容原来的渲染入口。"""
-    return draw_dot(root, filename=filename, directory=directory, view=view)
