@@ -1,5 +1,5 @@
-import dot_vishualizer
-from value import Value
+from microg import dot_vishualizer
+from microg.Value import Value
 
 a = Value(2, label='a')
 b = Value(3, label='b')
